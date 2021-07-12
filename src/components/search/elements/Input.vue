@@ -23,5 +23,7 @@ input {
   padding: 0 10px;
   font-size: 18px;
   width: 100%;
+  height: 43px;
+  border: 0;
 }
 </style>

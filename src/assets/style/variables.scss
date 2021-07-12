@@ -1,3 +1,29 @@
 $text-color: #2c3e50;
 
 $primary-color: rgb(54, 161, 95);
+$background-primary: rgb(68, 171, 231);
+$background-secondary: rgb(134, 206, 228);
+$background-opacity: rgba(68, 171, 231, 0.2);
+
+
+$breakpoints: (
+    'xxs': (max-width: 375px),
+    'xs': (max-width: 425px),
+    'sm': (max-width: 576px),
+    'md': (max-width: 768px),
+    'lg': (max-width: 992px),
+    'xl': (max-width: 1200px),
+    'xxl': (max-width: 1400px),
+    'xxxl': (max-width: 1600px),
+);
+
+$breakpoints-min: (
+    'xxs': (min-width: 320px),
+    'xs': (min-width: 375px),
+    'sm': (min-width: 425px),
+    'md': (min-width: 576px),
+    'lg': (min-width: 768px),
+    'xl': (min-width: 992px),
+    'xxl': (min-width: 1200px),
+    'xxxl': (min-width: 1400px),
+);

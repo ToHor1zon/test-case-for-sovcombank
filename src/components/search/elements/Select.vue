@@ -1,6 +1,6 @@
 <template>
-  <select :name="props.name">
-    <option v-for="option in options" :key="option.value" :value="option.value">
+  <select :name="name">
+    <option v-for="option in options" :key="option.id" :value="option.id">
       {{ option.name }}
     </option>
   </select>
@@ -21,3 +21,19 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+
+select {
+  height: 43px;
+  border: 0;
+  margin-left: 2px;
+  padding: 0 10px;
+  font-size: 18px;
+
+  option {
+    height: 43px;
+  }
+}
+
+</style>
