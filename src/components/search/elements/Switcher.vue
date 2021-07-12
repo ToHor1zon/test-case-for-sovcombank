@@ -78,7 +78,7 @@ span {
   }
 
   input + .slider {
-    background-color: rgb(77, 177, 235);
+    background-color: $primary-color;
   }
 
   input:checked + .slider:before {

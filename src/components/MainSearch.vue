@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     switcherStateHandler(isChecked) {
-console.log(isChecked)
+
       this.isOptionSearch = isChecked;
     }
   }

@@ -13,7 +13,7 @@ export default {
 button {
   border: 0;
   padding: 10px 35px;
-  background-color: rgb(54, 161, 95);
+  background-color: $primary-color;
   color: #fff;
   font-size: 20px;
 }
