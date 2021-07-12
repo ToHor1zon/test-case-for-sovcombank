@@ -2,8 +2,8 @@
   <div>
     <div class="main-search-body__wrapper">
       <form>
-        <SearchByName v-if="isOptionSearch" />
-        <SearchByOptions v-else />
+        <SearchByOptions v-if="isOptionSearch" />
+        <SearchByName v-else />
       </form>
     </div>
     <div class="main-search-footer__wrapper">
@@ -13,7 +13,7 @@
           @clickOnSwitcher="switcherStateHandler"
         />
       </div>
-      <div class="main-search-footer-params__wrapper">
+      <div v-if="isOptionSearch" class="main-search-footer-params__wrapper">
         <FooterOption
           @click="clickOnPriceOption"
           :title="'Цена'"
@@ -45,7 +45,7 @@ export default {
   },
   data() {
     return {
-      isOptionSearch: false,
+      isOptionSearch: true,
       isActivePrice: false,
       isActiveSquare: false,
     };
