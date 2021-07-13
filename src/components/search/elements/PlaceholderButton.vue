@@ -16,7 +16,7 @@ export default {
 
 <style scoped lang="scss">
 button {
-  padding: 10px 35px;
+  padding: 8px 35px;
   background-color: inherit;
   color: rgba(100, 100, 100, 0.9);
   border: 2px solid rgba(100, 100, 100, 0.314);
