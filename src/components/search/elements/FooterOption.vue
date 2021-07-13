@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click', isActive)" class="search-footer-button">
+  <button @click="$emit('click')" class="search-footer-button">
     <div
       :class="[
         'search-footer-button__icon',
