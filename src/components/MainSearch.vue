@@ -1,19 +1,27 @@
 <template>
-  <div>
+  <div class="main-search">
     <div class="main-search-body__wrapper">
       <form>
-        <SearchByOptions v-if="isOptionSearch" />
-        <SearchByName v-else />
+        <div>
+          <SearchByOptions
+            v-if="isOptionSearch"
+            @clickPlaceholderSquare="isActiveSquare=true" 
+            @clickPlaceholderPrice="isActivePrice=true" 
+            :isActivePrice="isActivePrice"
+            :isActiveSquare="isActiveSquare"
+          />
+          <SearchByName v-else />
+        </div>
       </form>
     </div>
-    <div class="main-search-footer__wrapper">
-      <div class="main-search-footer-switcher__wrapper">
+    <div class="footer__wrapper">
+      <div class="footer-switcher__wrapper">
         <Switcher
           :checked="isOptionSearch"
           @clickOnSwitcher="switcherStateHandler"
         />
       </div>
-      <div v-if="isOptionSearch" class="main-search-footer-params__wrapper">
+      <div v-if="isOptionSearch" class="footer-params__wrapper">
         <FooterOption
           @click="clickOnPriceOption"
           :title="'Цена'"
@@ -77,7 +85,7 @@ export default {
     }
   }
 
-  &-footer {
+  .footer {
     &__wrapper {
       display: flex;
       justify-content: space-between;

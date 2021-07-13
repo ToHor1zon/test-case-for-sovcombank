@@ -31,6 +31,10 @@ select {
   padding: 0 10px;
   font-size: 18px;
 
+  &:first-child {
+    margin-left: 0;
+  }
+
   option {
     height: 43px;
   }

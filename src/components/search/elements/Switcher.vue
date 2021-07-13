@@ -1,6 +1,6 @@
 <template>
   <div class="switcher">
-    <span @click="clickHandler(false)" :class="{'text-disabled': !checked}">Основной поиск</span>
+    <span @click="clickHandler(true)" :class="{'text-disabled': !checked}">Основной поиск</span>
     <label class="switch" for="switcher">
       <input
         type="checkbox"
@@ -10,7 +10,7 @@
       />
       <div class="slider round"></div>
     </label>
-    <span @click="clickHandler(true)" :class="{'text-disabled': checked}">Искать по названию</span>
+    <span @click="clickHandler(false)" :class="{'text-disabled': checked}">Искать по названию</span>
   </div>
 </template>
 
