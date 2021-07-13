@@ -1,22 +1,32 @@
 <template>
-  <div class="search-by-name__wrapper">
+  <form id="search-by-name__form" class="search-by-name__wrapper">
     <Input
-      :placeholder="'Введите название объекта (бизнес-центра, торгового центра, новостройки, логопарка)'"
+      name="name"
+      type="text"
+      placeholder="Введите название объекта (бизнес-центра, торгового центра, новостройки, логопарка)"
       class="search-by-name__input"
     />
-    <AcceptButton />
-  </div>
+    <AcceptButton @click="acceptHandler" />
+  </form>
 </template>
 
 <script>
 import Input from "./elements/Input.vue";
 import AcceptButton from "./elements/AcceptButton.vue";
 
+import { getFormData } from "../../helpers/form";
+
 export default {
   name: "SearchByName",
   components: {
     Input,
     AcceptButton,
+  },
+  methods: {
+    acceptHandler() {
+      const formData = getFormData("#search-by-name__form");
+      console.log(formData);
+    },
   },
 };
 </script>

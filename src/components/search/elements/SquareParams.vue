@@ -1,11 +1,11 @@
 <template>
   <div class="square-params">
     <template v-if="isActive">
-      <Input :placeholder="'от'" class="square__input" />
-      <Input :placeholder="'до'" class="square__input" />
-      <DisabledInput :value="'м²'" class="square__input" />
+      <Input type="number" name="square-from" placeholder="от" class="square__input" />
+      <Input type="number" name="square-to" placeholder="до" class="square__input" />
+      <DisabledInput value="м²" class="square__input" />
     </template>
-    <PlaceholderButton @clickPlaceholder="$emit('clickPlaceholderSquare')" v-else :title="'Добавить метраж'" />
+    <PlaceholderButton @click="$emit('clickPlaceholderSquare')" v-else title="Добавить метраж" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <button>Найти</button>
+  <button @click.prevent="$emit('click')">Найти</button>
 </template>
 
 <script>

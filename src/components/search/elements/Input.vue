@@ -1,5 +1,5 @@
 <template>
-  <input :name="name" :placeholder="placeholder" />
+  <input @input="$emit('input')" :type="type" :name="name" :placeholder="placeholder" />
 </template>
 
 <script>
@@ -12,8 +12,12 @@ export default {
     },
     placeholder: {
       type: String,
-      require: true,
+      default: '',
     },
+    type: {
+      type: String,
+      default: 'text',
+    }
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button @click.prevent="$emit('clickPlaceholder')">{{ title }}</button>
+  <button @click.prevent="$emit('click')">{{ title }}</button>
 </template>
 
 <script>

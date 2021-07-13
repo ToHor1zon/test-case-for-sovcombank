@@ -1,18 +1,16 @@
 <template>
   <div class="main-search">
     <div class="main-search-body__wrapper">
-      <form>
-        <div>
-          <SearchByOptions
-            v-if="isOptionSearch"
-            @clickPlaceholderSquare="isActiveSquare=true" 
-            @clickPlaceholderPrice="isActivePrice=true" 
-            :isActivePrice="isActivePrice"
-            :isActiveSquare="isActiveSquare"
-          />
-          <SearchByName v-else />
-        </div>
-      </form>
+      <div>
+        <SearchByOptions
+          v-if="isOptionSearch"
+          @clickPlaceholderSquare="isActiveSquare = true"
+          @clickPlaceholderPrice="isActivePrice = true"
+          :isActivePrice="isActivePrice"
+          :isActiveSquare="isActiveSquare"
+        />
+        <SearchByName v-else />
+      </div>
     </div>
     <div class="footer__wrapper">
       <div class="footer-switcher__wrapper">
@@ -24,12 +22,12 @@
       <div v-if="isOptionSearch" class="footer-params__wrapper">
         <FooterOption
           @click="clickOnPriceOption"
-          :title="'Цена'"
+          title="Цена"
           :isActive="isActivePrice"
         />
         <FooterOption
           @click="clickOnSquareOption"
-          :title="'Метраж'"
+          title="Метраж"
           :isActive="isActiveSquare"
         />
       </div>

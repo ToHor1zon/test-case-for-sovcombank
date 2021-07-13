@@ -1,11 +1,11 @@
 <template>
   <div class="price-params">
     <template v-if="isActive">
-      <Input :placeholder="'от'" class="price__input" />
-      <Input :placeholder="'до'" class="price__input" />
-      <DisabledInput :value="'₽/месяц'" class="price__input" />
+      <Input type="number" name="price-from" placeholder="от" class="price__input" />
+      <Input type="number" name="price-to" placeholder="до" class="price__input" />
+      <DisabledInput value="₽/месяц" class="price__input" />
     </template>
-    <PlaceholderButton @clickPlaceholder="$emit('clickPlaceholderPrice')" v-else :title="'Добавить цену'" />
+    <PlaceholderButton @click="$emit('clickPlaceholderPrice')" v-else title="Добавить цену" />
   </div>
 </template>
 

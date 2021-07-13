@@ -1,29 +1,29 @@
 <template>
-  <div class="search-by-option">
+  <form id="search-by-options__form" class="search-by-options">
     <div class="main__wrapper">
       <Select
-        :name="'city'"
+        name="city"
         :options="cities"
         class="main__select"
       />
       <Select
-        :name="'typeOfDeal'"
+        name="typeOfDeal"
         :options="typesOfDeal"
         class="main__select"
       />
       <Select
-        :name="'typeOfArea'"
+        name="typeOfArea"
         :options="typesOfArea"
         class="main__select"
       />
-      <AcceptButton />
+      <AcceptButton @click="acceptHandler" />
     </div>
 
     <div class="optional__wrapper">
         <PriceParams @clickPlaceholderPrice="$emit('clickPlaceholderPrice')" :isActive="isActivePrice" class="price" />
         <SquareParams @clickPlaceholderSquare="$emit('clickPlaceholderSquare')"  :isActive="isActiveSquare" class="square" />
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
@@ -31,6 +31,8 @@ import AcceptButton from "./elements/AcceptButton.vue";
 import Select from "./elements/Select.vue";
 import SquareParams from "./elements/SquareParams.vue";
 import PriceParams from "./elements/PriceParams.vue";
+
+import { getFormData } from "../../helpers/form";
 
 export default {
   name: "SearchByOptions",
@@ -67,11 +69,17 @@ export default {
       ],
     };
   },
+  methods: {
+    acceptHandler() {
+      const formData = getFormData('#search-by-options__form');
+      console.log(formData);
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.search-by-option {
+.search-by-options {
   .main {
     &__wrapper {
       display: flex;

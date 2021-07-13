@@ -1,5 +1,5 @@
 <template>
-  <select :name="name">
+  <select @change="$emit('change')" :name="name">
     <option v-for="option in options" :key="option.id" :value="option.id">
       {{ option.name }}
     </option>
@@ -27,7 +27,7 @@ export default {
 select {
   height: 43px;
   border: 0;
-  margin-left: 2px;
+  margin-left: 1px;
   padding: 0 10px;
   font-size: 18px;
 
